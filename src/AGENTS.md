@@ -10,7 +10,7 @@
 
 - `functions/` holds exported functions. `models/` holds exported types. `libs/` is an empty placeholder (`.gitkeep`).
 - Every public symbol is re-exported from `index.ts`, grouped under `// Functions` and `// Models` comments.
-- Imports across folders use the `@/` alias (`@/models/hello.model`). `tsc-alias` rewrites it at build time; `vitest.config.ts` resolves it in tests.
+- Imports across folders use the `@/` alias (`@/models/hello.model`). `tsc-alias` rewrites it at build time; `vitest.config.mts` resolves it in tests.
 - Type files are named `*.model.ts`.
 - Exported functions declare their return type (`@typescript-eslint/explicit-function-return-type`).
 

@@ -22,7 +22,7 @@ export default tseslint.config(
   {
     languageOptions: {
       parserOptions: {
-        projectService: { allowDefaultProject: ['vitest.config.ts'] },
+        projectService: { allowDefaultProject: ['vitest.config.mts'] },
         tsconfigRootDir: import.meta.dirname,
       },
     },
