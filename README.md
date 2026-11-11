@@ -39,10 +39,8 @@ Ensure you have updated the version in `package.json` and are logged into npm.
 ## Folder tree
 
 ```
-|   .eslintrc.json
+|   eslint.config.mjs
 |   .gitignore
-|   .prettierignore
-|   .prettierrc.json
 |   vitest.config.ts
 |   LICENSE
 |   main.ts

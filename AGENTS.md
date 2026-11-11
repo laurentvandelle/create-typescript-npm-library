@@ -18,9 +18,6 @@ Local setup: see `README.md`. Package manager: npm (`package-lock.json`).
 | Tests in watch mode                             | `npm run test:watch`   |
 | Lint, check only                                | `npm run lint:check`   |
 | Lint with autofix                               | `npm run lint`         |
-| Format check (Prettier)                         | `npm run format:check` |
-| Format write                                    | `npm run format`       |
-| Lint fix + format                               | `npm run fix`          |
 | Build, bump patch version, publish              | `npm run pub`          |
 
 `npm run pub` bumps the version and publishes to npm. Never run it unless the user asks.
