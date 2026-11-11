@@ -1,8 +1,8 @@
 import { describe, expect, test } from 'vitest';
-import { httpMessage, inc } from './hello';
+import { httpMessage, inc } from '@/functions/hello';
 
 describe('hello', () => {
-  test('Should increment a number', async () => {
+  test('Should increment a number', () => {
     // Given
     const nb = 3;
 
@@ -13,7 +13,7 @@ describe('hello', () => {
     expect(response).toEqual(4);
   });
 
-  test('Should return http message', async () => {
+  test('Should return http message', () => {
     // Given
     const message = 'test message';
 
