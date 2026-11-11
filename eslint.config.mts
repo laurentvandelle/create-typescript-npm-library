@@ -1,4 +1,3 @@
-// @ts-check
 
 import eslint from '@eslint/js';
 import tseslint from 'typescript-eslint';
@@ -16,7 +15,7 @@ const noBarrelOrRelative = {
 
 export default tseslint.config(
   {
-    ignores: ['**/node_modules/**', '**/dist/**', '**/coverage/**', 'debug/**', 'eslint.config.mjs'],
+    ignores: ['**/node_modules/**', '**/dist/**', '**/coverage/**', 'debug/**', 'eslint.config.mts'],
   },
   eslint.configs.recommended,
   tseslint.configs.recommendedTypeChecked,
