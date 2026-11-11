@@ -1,6 +1,6 @@
 # create-typescript-npm-library
 
-Simple typescript app with jest to create a npm library with types
+Simple typescript app with vitest to create a npm library with types
 
 ## Installation
 
@@ -24,7 +24,7 @@ To run the tests for your library, use the following command:
 npm run test
 ```
 
-This will execute all test files using Jest.
+This will execute all test files using Vitest (`npm run test:watch` for watch mode).
 
 ## Publish your library
 
@@ -43,7 +43,7 @@ Ensure you have updated the version in `package.json` and are logged into npm.
 |   .gitignore
 |   .prettierignore
 |   .prettierrc.json
-|   jest.config.ts
+|   vitest.config.ts
 |   LICENSE
 |   main.ts
 |   package-lock.json
