@@ -14,7 +14,9 @@ npx degit https://github.com/TheSmartMonkey/create-typescript-npm-library app
 
 2. Install node_modules with `npm install`
 
-3. Available commands with `npm run` (`npm start` runs your code from `main.ts`)
+3. Rename the package: set `name`, `description`, `author` and `repository` in `package.json`
+
+4. Available commands with `npm run` (`npm start` builds, then runs `debug/main.ts` against `dist/`)
 
 ## Running Tests
 
@@ -34,20 +36,20 @@ To publish your library to npm, use the following command:
 npm run pub
 ```
 
-Ensure you have updated the version in `package.json` and are logged into npm.
+This bumps the patch version, then `prepublishOnly` runs `npm run verify` and `npm run build` before publishing. Only `dist/` is published (see `files` in `package.json`). Ensure you are logged into npm (`npm login`).
 
 ## Folder tree
 
 ```
 |   eslint.config.mts
 |   .gitignore
-|   vitest.config.ts
+|   vitest.config.mts
 |   LICENSE
-|   main.ts
 |   package-lock.json
 |   package.json
 |   README.md
 |   tsconfig.json
+|   tsconfig.build.json
 |
 +---debug
     +---main.ts
@@ -62,4 +64,7 @@ Ensure you have updated the version in `package.json` and are logged into npm.
         .gitkeep
     +---models
         hello.model.ts
+|
++---docs
+    +---adr
 ```

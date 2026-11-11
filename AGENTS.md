@@ -18,7 +18,12 @@ Local setup: see `README.md`. Package manager: npm (`package-lock.json`).
 | Tests in watch mode                             | `npm run test:watch`   |
 | Lint, check only                                | `npm run lint:check`   |
 | Lint with autofix                               | `npm run lint`         |
-| Build, bump patch version, publish              | `npm run pub`          |
+| Type-check, no emit                             | `npm run typecheck`    |
+| Lint check, type-check, tests                   | `npm run verify`       |
+| Bump patch version, verify, build, publish      | `npm run pub`          |
+
+Run `npm run verify` before handing work back.
+Never hand back a failure: fix it, then run the command again.
 
 `npm run pub` bumps the version and publishes to npm. Never run it unless the user asks.
 
