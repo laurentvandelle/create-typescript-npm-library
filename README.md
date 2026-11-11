@@ -39,7 +39,7 @@ Ensure you have updated the version in `package.json` and are logged into npm.
 ## Folder tree
 
 ```
-|   eslint.config.mjs
+|   eslint.config.mts
 |   .gitignore
 |   vitest.config.ts
 |   LICENSE
