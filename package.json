@@ -1,20 +1,34 @@
 {
   "name": "create-typescript-npm-library",
   "description": "Simple typescript app with vitest to create a npm library with types",
+  "author": "TheSmartMonkey",
   "version": "0.0.1",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist"
+  ],
+  "sideEffects": false,
   "scripts": {
     "start": "npm run build && npm run start:prod",
     "start:prod": "cd debug && npm run start",
-    "build": "tsc && tsc-alias",
+    "build": "tsc -p tsconfig.build.json && tsc-alias -p tsconfig.build.json",
     "lint": "eslint --flag unstable_native_nodejs_ts_config src --fix",
     "lint:check": "eslint --flag unstable_native_nodejs_ts_config src",
     "test": "vitest run",
     "test:watch": "vitest",
-    "pub": "npm run build && npm version patch && npm publish",
+    "pub": "npm version patch && npm publish",
     "typecheck": "tsc --noEmit",
-    "verify": "npm run lint && npm run typecheck && npm test"
+    "verify": "npm run lint:check && npm run typecheck && npm test",
+    "prepublishOnly": "npm run verify && npm run build",
+    "prebuild": "node -e \"require('fs').rmSync('dist',{recursive:true,force:true})\""
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",
@@ -29,6 +43,10 @@
     "vitest": "^4.1.12"
   },
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TheSmartMonkey/create-typescript-npm-library.git"
+  },
   "bugs": {
     "url": "https://github.com/TheSmartMonkey/create-typescript-npm-library/issues"
   },
