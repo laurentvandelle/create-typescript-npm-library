@@ -21,7 +21,7 @@ A starter for an npm library written in TypeScript that ships its own type decla
 
 ## Runtime
 
-`npm run build` compiles `src/` with `tsc` (module `node16`, CommonJS output since `package.json` has no `"type"`) into `dist/`, emitting `.d.ts` and source maps. `tsc-alias` then rewrites `@/` imports to relative paths. `package.json` points `main` at `dist/index.js` and `types` at `dist/index.d.ts`. `npm start` builds, then runs `debug/main.ts` with `ts-node`.
+`npm run build` compiles `src/` with `tsc` (module `node20`, target `ES2024` for Node 24, CommonJS output since `package.json` has no `"type"`) into `dist/`, emitting `.d.ts` and source maps. `tsc-alias` then rewrites `@/` imports to relative paths. `package.json` points `main` at `dist/index.js` and `types` at `dist/index.d.ts`. `npm start` builds, then runs `debug/main.ts` with `node` (Node 24 strips TypeScript types natively).
 
 ## Out of scope
 

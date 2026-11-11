@@ -11,12 +11,5 @@ export default defineConfig({
     include: ['src/**/*.test.ts'],
     environment: 'node',
     clearMocks: true,
-    coverage: {
-      provider: 'v8',
-      include: ['src/**/*.ts'],
-      exclude: ['**/__snapshots__/**', '**/index.ts', '**/openapi.ts', '**/schemas/**', 'src/**/*.test.ts'],
-      reportsDirectory: 'coverage',
-      reporter: ['json', 'lcov', 'clover', 'cobertura'],
-    },
   },
 });

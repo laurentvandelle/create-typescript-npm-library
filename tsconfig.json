@@ -1,11 +1,11 @@
 {
   "compilerOptions": {
-    "lib": ["DOM", "ESNext"],
-    "module": "node16",
+    "lib": ["DOM", "ES2024"],
+    "module": "node20",
     "moduleResolution": "node16",
     "removeComments": false,
     "sourceMap": true,
-    "target": "ES2021",
+    "target": "ES2024",
     "outDir": "./dist",
     "rootDir": "./src",
     "allowSyntheticDefaultImports": true,
@@ -23,8 +23,5 @@
     }
   },
   "include": ["src"],
-  "exclude": ["node_modules/**/*", ".webpack/**/*", "_warmup/**/*", ".vscode/**/*", "vitest.config.ts", "debug/**/*"],
-  "ts-node": {
-    "require": ["tsconfig-paths/register"]
-  }
+  "exclude": ["node_modules/**/*", ".webpack/**/*", "_warmup/**/*", ".vscode/**/*", "vitest.config.ts", "debug/**/*"]
 }
