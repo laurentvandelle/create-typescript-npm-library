@@ -5,7 +5,7 @@ Simple typescript app with vitest to create a npm library with types
 ## Installation
 
 ```sh
-npx degit https://github.com/TheSmartMonkey/create-typescript-npm-library app
+npx degit https://github.com/laurentvandelle/create-typescript-npm-library app
 ```
 
 ## Getting started

@@ -1,7 +1,7 @@
 {
   "name": "create-typescript-npm-library",
   "description": "Simple typescript app with vitest to create a npm library with types",
-  "author": "TheSmartMonkey",
+  "author": "laurentvandelle",
   "version": "0.0.1",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -45,12 +45,12 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/TheSmartMonkey/create-typescript-npm-library.git"
+    "url": "git+https://github.com/laurentvandelle/create-typescript-npm-library.git"
   },
   "bugs": {
-    "url": "https://github.com/TheSmartMonkey/create-typescript-npm-library/issues"
+    "url": "https://github.com/laurentvandelle/create-typescript-npm-library/issues"
   },
-  "homepage": "https://github.com/TheSmartMonkey/create-typescript-npm-library#readme",
+  "homepage": "https://github.com/laurentvandelle/create-typescript-npm-library#readme",
   "keywords": [
     "npm",
     "library",
