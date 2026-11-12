@@ -1,0 +1,40 @@
+name: Bug report
+description: Something does not work as documented.
+labels: [bug]
+body:
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened
+      description: What you did, what you expected, and what happened instead.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Steps to reproduce
+      description: The smallest set of steps or code that shows the problem.
+      placeholder: |
+        1. npm install
+        2. npm run build
+        3. ...
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Package version or commit
+    validations:
+      required: true
+  - type: input
+    id: node
+    attributes:
+      label: Node.js version and OS
+      placeholder: Node 24.x on macOS 15
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs or error output
+      render: shell
