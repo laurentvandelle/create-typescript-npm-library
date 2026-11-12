@@ -1,5 +1,5 @@
 import { describe, expect, test } from 'vitest';
-import { httpMessage, inc } from '@/functions/hello';
+import { httpMessage, inc } from '#src/functions/hello';
 
 describe('hello', () => {
   test('Should increment a number', () => {

@@ -1,4 +1,4 @@
-import { HttpMessage } from '@/models/hello.model';
+import { HttpMessage } from '#src/models/hello.model';
 
 export function message(): void {
   // eslint-disable-next-line no-console
